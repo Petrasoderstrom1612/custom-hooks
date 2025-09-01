@@ -1,16 +1,13 @@
 import React from "react"
 import useEffectOnUpdate from "../../hooks/useEffectOnUpd"
+import useState from "../../hooks/useState"
 
 const ToggleContext = React.createContext()
 
 export default function Toggle({ children, onToggle = () => {}}) {
-    const [on, setOn] = React.useState(false)
-
-    function toggle() {
-        setOn(prevOn => !prevOn)
-    }
+    const [on, toggle] = useState()
     
-    useEffectOnUpdate(onToggle, [on])
+    useEffectOnUpdate(onToggle, [on]) //do not forget to invoke it with the array!
     
 
     return (
