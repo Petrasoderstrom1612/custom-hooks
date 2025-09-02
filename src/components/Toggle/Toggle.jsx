@@ -1,20 +1,20 @@
-import React from "react"
-import useEffectOnUpdate from "../../hooks/useEffectOnUpd"
-import useState from "../../hooks/useState"
+// import React from "react"
+// import useEffectOnUpdate from "../../hooks/useEffectOnUpd"
+// import useState from "../../hooks/useState"
 
-const ToggleContext = React.createContext()
+// const ToggleContext = React.createContext()
 
-export default function Toggle({ children, onToggle = () => {}}) {
-    const [on, toggle] = useState()
+// export default function Toggle({ children, onToggle = () => {}}) {
+//     const [on, toggle] = useState()
     
-    useEffectOnUpdate(onToggle, [on]) //do not forget to invoke it with the array!
+//     useEffectOnUpdate(onToggle, [on]) //do not forget to invoke it with the array!
     
 
-    return (
-        <ToggleContext.Provider value={{ on, toggle }}>
-            {children}
-        </ToggleContext.Provider>
-    )
-}
+//     return (
+//         <ToggleContext.Provider value={{ on, toggle }}>
+//             {children}
+//         </ToggleContext.Provider>
+//     )
+// }
 
-export { ToggleContext }
+// export { ToggleContext }
