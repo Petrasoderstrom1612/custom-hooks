@@ -6,7 +6,7 @@ import Menu from "./components/Menu/index"
 
 
 function App() {
-  const [on, toggle] = useState()
+  const [on, toggle] = useState() //useState custom hook
 
   useEffectOnUpdate(() => {console.log("Toggled")}, [on])
 

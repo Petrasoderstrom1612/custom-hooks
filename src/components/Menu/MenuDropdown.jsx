@@ -1,10 +1,17 @@
 import React from 'react'
+import {MenuContext} from "./Menu"
 
 const MenuDropdown = ({children}) => {
+  const {on} = React.useContext(MenuContext)
+  
   return (
-    <div className="menu-dropdown">
-      {children}
-    </div>
+    <>
+    {on &&
+        <div className="menu-dropdown">
+        {children}
+        </div>
+    }
+    </>
   )
 }
 
