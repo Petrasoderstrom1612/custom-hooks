@@ -6,7 +6,7 @@ const MenuDropdown = ({children}) => {
   
   return (
     <>
-    {on &&
+    {on && //you need to wrap the entire div so that it does not stay there visually
         <div className="menu-dropdown">
         {children}
         </div>
