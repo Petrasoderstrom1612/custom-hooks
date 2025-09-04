@@ -14,7 +14,7 @@ function App() {
     <>
      <div onClick={toggle} className={`box ${on ? "filled" : ""}`}></div> {/*YOU CANNOT HAVE onToggle={() => {console.log("Toggled")}} SINCE THIS IS A HTML ELEMENT THAT ONLY ACCEPTS DOM EVENT, NOT ONTOGGLE THAT IS A PROP */}
   
-      <Menu>
+      <Menu onClicking={()=>{console.log("toggled")}}>
         <Menu.Button>Menu</Menu.Button>
         <Menu.Dropdown>
           <Menu.Item>Home</Menu.Item>
